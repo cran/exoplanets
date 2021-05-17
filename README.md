@@ -11,6 +11,9 @@ status](https://github.com/ropensci/exoplanets/workflows/R-CMD-check/badge.svg)]
 coverage](https://codecov.io/gh/ropensci/exoplanets/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/exoplanets?branch=master)
 [![Peer
 review](https://badges.ropensci.org/309_status.svg)](https://github.com/ropensci/software-review/issues/309)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/exoplanets)](https://CRAN.R-project.org/package=exoplanets)
+[![CRAN\_Download\_Badge](https://cranlogs.r-pkg.org/badges/exoplanets)](https://cran.r-project.org/package=exoplanets)
 <!-- badges: end -->
 
 The goal of exoplanets is to provide access to [NASA’s Exoplanet Archive
@@ -23,10 +26,10 @@ interface to access exoplanet data.
 
 ## Installation
 
-You can install from from ropensci’s *R-universe* repository with:
+Install the released version of `exoplanets` from CRAN:
 
 ``` r
-install.packages("exoplanets", repos = "https://ropensci.r-universe.dev")
+install.packages("exoplanets")
 ```
 
 Or you can install from GitHub with:
@@ -45,7 +48,10 @@ table:
 ``` r
 library(exoplanets)
 
-exoplanets("k2names", progress = FALSE)
+# we will avoid printing progress in the readme
+options(exoplanets.progress = FALSE)
+
+exoplanets("k2names")
 #> • https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+k2names&format=csv
 #> # A tibble: 449 x 3
 #>    epic_id        k2_name  pl_name     
@@ -66,7 +72,7 @@ exoplanets("k2names", progress = FALSE)
 If you wish, you can select only the columns you need:
 
 ``` r
-exoplanets("ps", c("pl_name", "hostname"), progress = FALSE)
+exoplanets("ps", c("pl_name", "hostname"))
 #> • https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_name,hostname+from+ps&format=csv
 #> 
 #> ── Column specification ────────────────────────────────────────────────────────
@@ -90,23 +96,46 @@ exoplanets("ps", c("pl_name", "hostname"), progress = FALSE)
 #> # … with 29,388 more rows
 ```
 
+You can also specify the number of rows returned using `limit`:
+
+``` r
+exoplanets("keplernames", limit = 5)
+#> • https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+keplernames+top+5&format=csv
+#> 
+#> ── Column specification ────────────────────────────────────────────────────────
+#> cols(
+#>   kepid = col_double(),
+#>   koi_name = col_character(),
+#>   kepler_name = col_character(),
+#>   pl_name = col_character()
+#> )
+#> # A tibble: 5 x 4
+#>     kepid koi_name  kepler_name   pl_name      
+#>     <dbl> <chr>     <chr>         <chr>        
+#> 1 7515212 K00679.02 Kepler-212 b  Kepler-212 b 
+#> 2 8210018 K02762.01 Kepler-1341 b Kepler-1341 b
+#> 3 9008737 K02768.01 Kepler-404 b  Kepler-404 b 
+#> 4 4833421 K00232.05 Kepler-122 f  Kepler-122 f 
+#> 5 9963524 K00720.02 Kepler-221 d  Kepler-221 d
+```
+
 Information on the tables and columns available can be found with:
 
 ``` r
 tableinfo
 #> # A tibble: 394 x 13
 #>    table database_column_… table_label description  in_ps_table in_ps_comp_pars…
-#>    <chr> <chr>             <chr>       <chr>        <chr>       <chr>           
-#>  1 ps    default_flag      Default Pa… Boolean fla… X           ""              
-#>  2 ps    soltype           Solution T… Disposition… X           ""              
-#>  3 ps    pl_controv_flag   Controvers… Flag indica… X           "X"             
-#>  4 ps    pl_name           Planet Name Planet name… X           "X"             
-#>  5 ps    hostname          Host Name   Stellar nam… X           "X"             
-#>  6 ps    pl_letter         Planet Let… Letter assi… X           "X"             
-#>  7 ps    hd_name           HD ID       Name of the… X           "X"             
-#>  8 ps    hip_name          HIP ID      Name of the… X           "X"             
-#>  9 ps    tic_id            TIC ID      Name of the… X           "X"             
-#> 10 ps    gaia_id           GAIA ID     Name of the… X           "X"             
+#>    <chr> <chr>             <chr>       <chr>        <lgl>       <lgl>           
+#>  1 ps    default_flag      Default Pa… Boolean fla… TRUE        FALSE           
+#>  2 ps    soltype           Solution T… Disposition… TRUE        FALSE           
+#>  3 ps    pl_controv_flag   Controvers… Flag indica… TRUE        TRUE            
+#>  4 ps    pl_name           Planet Name Planet name… TRUE        TRUE            
+#>  5 ps    hostname          Host Name   Stellar nam… TRUE        TRUE            
+#>  6 ps    pl_letter         Planet Let… Letter assi… TRUE        TRUE            
+#>  7 ps    hd_name           HD ID       Name of the… TRUE        TRUE            
+#>  8 ps    hip_name          HIP ID      Name of the… TRUE        TRUE            
+#>  9 ps    tic_id            TIC ID      Name of the… TRUE        TRUE            
+#> 10 ps    gaia_id           GAIA ID     Name of the… TRUE        TRUE            
 #> # … with 384 more rows, and 7 more variables:
 #> #   uncertainties_column_positive_negative <chr>, limit_column <chr>,
 #> #   default <lgl>, notes <chr>, displayed_string_name <chr>, flag_column <lgl>,
