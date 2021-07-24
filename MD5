@@ -1,7 +1,7 @@
-333f5101a8988bf3c2d44b7de63037fa *DESCRIPTION
+32f49dcd67ed24c5fb4dde51438d7bad *DESCRIPTION
 7aedaa4346c8feb06ecf52af74811013 *LICENSE
 6ad1a1d8fdb4acab5b62f2c0b3eb5fea *NAMESPACE
-fad663bee73d2a8d3293d804ac1cdca8 *NEWS.md
+d290e844664029190d5be66977eb9c5c *NEWS.md
 cb8e57adab4324c4ff5839c60cc6e4f0 *R/cache.R
 939cd2ec830b97346e90790e7edbf46c *R/constants.R
 8333c81fb47b5516301418a9220e1e4b *R/data.R
@@ -9,11 +9,11 @@ cb8e57adab4324c4ff5839c60cc6e4f0 *R/cache.R
 a514b082f62324f5fcf55c74d1631f81 *R/exoplanets.R
 781eb0b0f86020f7fd7f578b03c9e866 *R/utils.R
 e09e8604b434858b12eb219d822d8239 *R/zzz.R
-0bd11fe7ccecc5ecafdd2ef5c3bb7df7 *README.md
-5ddbbd5e25d4798348529bba1a7c944a *build/vignette.rds
-ea43da6df20efece4cb9d962f9cd000e *data/tableinfo.rda
-b25c4eab58d13c389d8447b93b8ff561 *inst/doc/exoplanets.Rmd
-a66fad91cea02b63e9754bdbbe94bc88 *inst/doc/exoplanets.html
+767ca3fd86892987235721a18da171ca *README.md
+4d7a08ec873415ec0b8dfb3da68de81e *build/vignette.rds
+64f2f82db92226310c20dd8ed002fe94 *data/tableinfo.rda
+ee54523881d3dfea4c7f2c149e4f3208 *inst/doc/exoplanets.Rmd
+a1c285c63cfd5be45d2fe76ffd478909 *inst/doc/exoplanets.html
 dcec7352dbed5e5ba3076dac84a843c7 *inst/httptest/redact.R
 819e82de9f2baa2c7145057b20021da8 *inst/httptest/request.R
 7b7021cbd261fc69ef134be459674a67 *man/exoplanets-package.Rd
@@ -22,7 +22,7 @@ b10738d0b9be96cfb59f574044dcf903 *man/exoplanets.Rd
 8d89a0d076c325202dea96f092eed87d *man/figures/Thumbs.db
 87ff0727b2a119bcf30bc086c5882f6a *man/figures/logo.png
 bb6a9ab1f8a5ea67c12dc0aec3eed8ef *man/forget_exoplanets.Rd
-b6e584f456899b4106073f3e7b57e186 *man/tableinfo.Rd
+dfc4a4376e5b904ab9c04a4f8b69fe14 *man/tableinfo.Rd
 3fa87646b32baaa0770bb58afd53de3e *tests/testthat.R
 c7e25496e46133c77f7282d6c5e63e10 *tests/testthat/_snaps/exoplanets.md
 5e11494d8be4192ba60b2fc4d480ce80 *tests/testthat/exoplanets-csv-select/r/sync-940e51.txt
@@ -45,7 +45,7 @@ c791ad2f87fb02fda5d09325d3263c83 *tests/testthat/exoplanets-tsv-select/r/sync-e9
 10c7de538dd1aafcc5c7b59b1f0c4d7f *tests/testthat/exoplanets-tsv/r/sync-b4a996.txt
 e6a0de0007c123bc74fc36a0fc6a419b *tests/testthat/setup.R
 3960d7809577c495cab5de9d08b6193a *tests/testthat/test-exoplanets.R
-b25c4eab58d13c389d8447b93b8ff561 *vignettes/exoplanets.Rmd
+ee54523881d3dfea4c7f2c149e4f3208 *vignettes/exoplanets.Rmd
 85e7ceaccdbec2cafe02247e87ab7d3b *vignettes/exoplanets.Rmd.orig
-6829af42623a3061b78b398aab52143f *vignettes/exoplanets_vignette_img-discovery-1.png
+9d80e4153ffd33054856a45e63ea47f2 *vignettes/exoplanets_vignette_img-discovery-1.png
 8eb05be86a9d9962500c9e156c964eb3 *vignettes/precompile.R

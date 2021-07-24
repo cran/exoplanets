@@ -1,6 +1,6 @@
 Package: exoplanets
 Title: Access NASA's Exoplanet Archive Data
-Version: 0.2.1
+Version: 0.2.2
 Authors@R: c(
   person("Tyler", "Littlefield", email = "tylerlittlefield@hey.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-6020-1125")),
   person("Maëlle", "Salmon", role = c("ctb", "rev")),
@@ -24,10 +24,10 @@ Language: en-US
 LazyData: true
 RoxygenNote: 7.1.1
 NeedsCompilation: no
-Packaged: 2021-05-16 23:08:19 UTC; tlittlef
+Packaged: 2021-07-24 16:38:49 UTC; tlittlef
 Author: Tyler Littlefield [aut, cre] (<https://orcid.org/0000-0002-6020-1125>),
   Maëlle Salmon [ctb, rev],
   Mathida Chuk [ctb]
 Maintainer: Tyler Littlefield <tylerlittlefield@hey.com>
 Repository: CRAN
-Date/Publication: 2021-05-17 04:20:02 UTC
+Date/Publication: 2021-07-24 16:50:05 UTC
